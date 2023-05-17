@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Hong K. Song, 2110061 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> MIDTERM TEST </title>
+  <style type="text/css">
+    tbody {color:white;
+          background-color:grey;}
+    thead, tfoot {background-color:silver;}
+    div {border:5px solid silver;
+         padding:5px;
+         margin:5px;}
+    legend {color:white;}
+    table { border:5px solid gray;
+          margin:10px;
+        padding:5px;}
+    .right {float:right;}
+    .center {text-align:center; padding:25px;}
+    .blue{ background-color:blue; }
+    .lblue{ background-color:lightblue; }
+    .lsalmon{ background-color:lightsalmon; }
+    .lgreen{ background-color:lightgreen; }
+  </style>
+  <script type="text/javascript">
+    function display(){
+      var uName = document.getElementById("un").value;
+      var uPsw = document.getElementById("psw").value;
+      var uRadioVal;
+      if(document.getElementById("radio1").checked == true)
+         uRadioVal = document.getElementById("radio1").value;
+      if(document.getElementById("radio2").checked == true)
+         uRadioVal = document.getElementById("radio2").value;
+      if(document.getElementById("radio3").checked == true)
+         uRadioVal = document.getElementById("radio3").value;
+      var uMonth = document.getElementById("month").value;
+      var uYear = document.getElementById("year").value;
+      alert("User Name: "+uName+
+         "\n Psw      : "+uPsw+
+         "\n Payment  : "+uRadioVal+
+         "\n Month    : "+uMonth+
+         "\n Year     : "+uYear);
+		} 
+	 function calc() 
+    {
+      var id1 = parseInt(document.getElementById("id1").innerHTML);
+      var id2 = parseInt(document.getElementById("id2").innerHTML);
+      var id3 = parseInt(document.getElementById("id3").innerHTML);
+      var id4 = parseInt(document.getElementById("id4").innerHTML);
+      var id5 = parseInt(document.getElementById("id5").innerHTML);
+      var id6 = parseInt(document.getElementById("id6").innerHTML);
+      var id7 = parseInt(document.getElementById("id7").innerHTML);
+
+      var solution = id1 + id2 + id3 + id4 + id5 + id6 + id7;
+      alert("The total is: " + solution);
+    }
+    
+  </script>
+ </head>
+ <body>
+   <form action="" method="get">
+     <table border="1" width="900px">
+       <thead>
+        <tr><th colspan="12">This is a <span style="background-color:red;color: white">table element</span>, formated using <span style="background-color:green ;color: white"> CSS </span> (external, internal or inline)
+		and <span style="background-color:blue;color: white"> JS </span> </th></tr>
+       </thead>
+     <tfoot>
+<tr><th colspan="12"> <span style="color: red; float: left;">Hong 2110061</span><span style="float: right;">Copyright 2023</span></th></tr>
+</tfoot>
+       <tbody>
+        <tr>
+	
+         <th rowspan="6" style="vertical-align:bottom;">
+           <div class="blue white" style="float:left;">
+              <a href="https://validator.w3.org/" target="_blank">
+			  	<img src="compman.gif" alt="programmer" title="programmer" width="100px" usemap="#CompMan" class="right" />
+                <img src="valid-xhtml10.png" alt="w3c valid xhtml" width="100px" />
+			
+              </a>
+           </div>
+         </th>
+         <td colspan="8">
+             <fieldset>
+               This is a <span style="background-color:blue">form</span> with input, select checkbox, and radio fields.
+               <legend>Login section</legend>
+               <div class="center">
+                 User Name:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="un" value="user name" />
+                 <br />
+                 Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="psw" value="123456" />
+               </div>
+             </fieldset>
+         </td>
+         <th rowspan="6" style="vertical-align:top;">
+   	      <div class="blue white" style="float:right;">
+   	       <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+   	        <img src="valid-css.png" alt="w3c valid css" width="100px" />
+			<img src="compman.gif" alt="programmer" title="programmer" width="100px" usemap="#CompMan" class="right" />
+           </a>
+          </div>
+         </th>
+        </tr>
+        <tr>
+          <th colspan="4">
+            <fieldset>
+              <legend>Section 1</legend>
+              <div class="center">
+                <table>
+                  <tr>
+                    <td>
+                     <input type="radio" name="payMethod" id="radio1" value="Credit" checked="checked"/>
+                    </td>
+                    <td>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td>
+                     Visa
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                     <input type="radio" name="payMethod" id="radio2" value="Check" />
+                   </td>
+                   <td>
+                     &nbsp;&nbsp;&nbsp;&nbsp;
+                   </td>
+                   <td>
+                     MC
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>
+                    <input type="radio" name="payMethod" id="radio3" value="Cash" />
+                  </td>
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>
+                    Amex
+                  </td>
+                </tr>
+                </table>
+              </div>
+            </fieldset>
+          </th>
+          <th colspan="4">
+            <fieldset>
+              <legend>Section 2</legend>
+              <div class="center">
+                <table>
+                  <tr>
+                      <td colspan="2">
+                         <label>*Expiration date: </label>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                   <select name="expdatemonth" id="month">
+                     <option value="1">1 = Jan</option>
+                     <option value="2">2 = Feb</option>
+                     <option value="3">3 = Mar</option>
+                     <option value="4">4 = Apr</option>
+                     <option value="5">5 = May</option>
+                     <option value="6">6 = Jun</option>
+                     <option value="7">7 = Jul</option>
+                     <option value="8">8 = Aug</option>
+                     <option value="9">9 = Sep</option>
+                     <option value="10">10 = Oct</option>
+                     <option value="11">11 = Nov</option>
+                     <option value="12">12 = Dec</option>
+                 </select>
+                      </td>
+                      <td>
+                 <select name="expdateyear" id="year">
+                     <option value="2020">2020</option>
+                     <option value="2021">2021</option>
+                     <option value="2022">2022</option>
+                     <option value="2023">2023</option>
+                     <option value="2024">2024</option>
+                     <option value="2025">2025</option>
+                 </select>
+                   </td></tr>
+                </table>
+              </div>
+            </fieldset>
+          </th>
+        </tr>
+        <tr><td><input type="submit" class="lblue" value="Submit" onclick="display()" /></td>
+        <td colspan="6">
+           <span class="right">
+                 <area shape="rect" coords="9,7,67,52" href="http://www.w3schools.com" target="_blank" alt="W3Schools" />
+               </map>
+           </span>
+         </td>
+         <td><input type="reset" class="lblue" value="Reset" onclick="display()" style="float:right;"/></td>
+        </tr>
+       <tr>
+		<th colspan="2"> </th>
+        <td style="width: 100px;  text-align: center;">H</td>
+        <td style="width: 100px; text-align: center;">O</td>
+        <td style="width: 100px; text-align: center;">N</td>
+        <td style="width: 100px; text-align: center;">G</td>
+		<th colspan="2"> </th>
+
+      </tr>
+	      <tr>
+        <td id="id1" style="width: 100px;  text-align: center; ">2</td>
+        <td id="id2" style="width: 1px; text-align: center;">1</td>
+        <td id="id3" style="width: 1px; text-align: center;">1</td>
+        <td id="id4" style="width: 1px; text-align: center;">0</td>
+        <td id="id5" style="width: 1px; text-align: center;">0</td>
+        <td id="id6" style="width: 1px; text-align: center;">6</td>
+        <td id="id7" style="width: 1px; text-align: center;">1</td>    
+        <td colspan="1"><button onclick="calc()" type="button">Calculate and display the total</button></td>      
+      </tr>
+       </tbody>
+     </table>
+   </form>
+ </body>
+</html>
